@@ -36,7 +36,7 @@ Auth::routes();
     Route::get('/changepassword','Admin\AdminController@changePassword')->name('info');
 
 //  Danh sach san pham
-    Route::get('/product','Admin\ProductController@product')->name('product');
+    Route::get('/listProduct','Admin\ProductController@product')->name('product');
 //  Danh sach don hang
     Route::get('/order','Admin\OrderController@oder')->name('order');
 //  Danh sacsh nguoi dung

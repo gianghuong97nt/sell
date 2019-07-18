@@ -8,5 +8,7 @@ use App\Http\Controllers\Controller;
 class ProductController extends Controller
 {
     //
-    protected $table = 'products';
+    public function product(){
+        return view('admins.products');
+    }
 }

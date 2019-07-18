@@ -66,50 +66,6 @@ function initEvents() {
             alert('nhập email' + e.message);
         }
     });
-    $(document).on('click','#passwordInfo',function (e) {
-        try {
-            e.preventDefault();
-            $("input").keypress(function(){
-                $("#invalid_password").addClass('display_view');
-            });
-
-        } catch (e) {
-            alert('nhập email' + e.message);
-        }
-    });
-    $(document).on('change','#passwordInfo',function (e) {
-        try {
-            e.preventDefault();
-            if($('#passwordInfo').val() == ""){
-                $("#invalid_password").removeClass('display_view');
-                $("#invalid_password").html("Không được để trống");
-            }
-        } catch (e) {
-            alert('nhập email' + e.message);
-        }
-    });
-    $(document).on('click','#repassword',function (e) {
-        try {
-            e.preventDefault();
-            $("input").keypress(function(){
-                $("#invalid_repassword").addClass('display_view');
-            });
-
-        } catch (e) {
-            alert('nhập email' + e.message);
-        }
-    });
-    $(document).on('change','#repassword',function (e) {
-        try {
-            e.preventDefault();
-            if($('#repassword').val() == ""){
-                $("#invalid_repassword").removeClass('display_view');
-                $("#invalid_repassword").html("Không được để trống");
-            }
-        } catch (e) {
-            alert('nhập email' + e.message);
-        }
-    });
 
     $(document).on('click','.btn-back-info',function (e) {
         try {
@@ -145,7 +101,7 @@ function initEvents() {
 }
 
 function validate() {
-    if(!isEmail($('#email').val()) || $('#passwordInfo').val() == "" || $('#repassword').val() == ""  ){
+    if(!isEmail($('#email').val())  ){
         if(!isEmail($('#email').val())){
             if($('#email').val() == ""){
                 $("#invalid_email").removeClass('display_view');
@@ -156,32 +112,6 @@ function validate() {
             }
             $('#email').focus();
             resutl = _fail;
-        }
-        if($('#passwordInfo').val() == ""){
-            $("#invalid_password").removeClass('display_view');
-            $("#invalid_password").html("Không được bỏ trống");
-
-            if(resutl == ''){
-                $('#passwordInfo').focus();
-            }
-            resutl = _fail;
-        }
-        if($('#repassword').val() == ""){
-            $("#invalid_repassword").removeClass('display_view');
-            $("#invalid_repassword").html("Không được bỏ trống");
-            if(resutl == ''){
-                $('#repassword').focus();
-            }
-            resutl = _fail;
-        }
-
-    }else{
-        if($('#passwordInfo').val() != $('#repassword').val()){
-            $("#invalid_repassword").removeClass('display_view');
-            $("#invalid_repassword").html("Mật khẩu không khớp. Nhập lại");
-            resutl = _fail;
-        }else{
-            resutl = _true;
         }
     }
 }

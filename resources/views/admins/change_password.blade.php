@@ -3,7 +3,7 @@
     <title>Thay đổi password</title>
 @endsection
 @section('link')
-    <link href="{{asset('admin_assets/css/info.css')}}" rel='stylesheet' type='text/css' />
+    <link href="{{asset('admin_assets/css/password.css')}}" rel='stylesheet' type='text/css' />
 @endsection
 @section('tag')
     <script src="{{ asset('admin_assets/js/password.js') }}"></script>
@@ -45,7 +45,7 @@
                             <label class="form-control label-info">Nhập lại mật khẩu</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="tel" class="form-control" id="repmaxlength="20"/>
+                            <input type="tel" class="form-control" id="rep" length="20"/>
                         </div>
                     </div>
                 </div>
