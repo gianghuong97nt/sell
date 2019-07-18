@@ -4,8 +4,8 @@
 @endsection
 @section('link')
     {{--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">--}}
-    <link href="{{asset('admin_assets/css/table_ductproduct.css')}}" rel='stylesheet' type='text/css' />
-    <link href="{{asset('admin_assets/css/pro.css')}}" rel='stylesheet' type='text/css' />
+    <link href="{{asset('admin_assets/css/table_product.css')}}" rel='stylesheet' type='text/css' />
+    <link href="{{asset('admin_assets/css/pro.css')}}" rel='stylesheet' type='text/css'/>
 @endsection
 @section('tag')
     <script src="{{ asset('admin_assets/js/product.js') }}"></script>
@@ -87,19 +87,6 @@
             </div>
 
             <div id="table-result">
-                <div class="row">
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                        <label class="form-control label-info">Số trang hiển thị</label>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <select style="text-align-last: center; text-align: center;" id="page_size">
-                            <option value="5" style="text-align: left">5</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                        </select>
-                    </div>
-                </div>
-
                 <div id="">
                     <table class="table table-bordered tbl_product">
                         <thead>

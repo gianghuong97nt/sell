@@ -18,19 +18,7 @@ var _true = "ok";
 function initEvents() {
     $(document).on('click','#save_info',function (e) {
         try {
-            e.preventDefault();
-            validate();
-            if(resutl == _true){
-                $.dialogUpdate({
-                    contents: JSMESSAGE.save_confirm,
-                    callback: function (confirm) {
-                        if (confirm) {
-                            personalInfo();
-                        }
-                    }
-                });
-                $("#invalid_email").addClass('display_view');
-            }
+           
         } catch (e) {
             alert('personalInfo' + e.message);
         }
@@ -75,28 +63,9 @@ function initEvents() {
             alert('nhập email' + e.message);
         }
     });
-    $(document).on('keypress','.form-control', function (e) {
-        if(e.which === 13){
-            validate();
-            if(resutl == _true){
-                $.dialogUpdate({
-                    contents: JSMESSAGE.save_confirm,
-                    callback: function (confirm) {
-                        if (confirm) {
-                            personalInfo();
-                        }
-                    }
-                });
-                $("#invalid_email").addClass('display_view');
-            }
-        }
-    });
+   
 
-    $.ajaxSetup({
-        headers: {
-            'X-CSSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
+    
 
 }
 
