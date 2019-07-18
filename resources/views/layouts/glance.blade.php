@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>@yield('title')</title>
+    @yield('title')
     @include('partials.head')
     @yield('link')
 </head>
@@ -34,7 +34,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- new added graphs chart js-->
 
 @include('partials.main')
-@yield('script')
+@yield('tag')
 
 </body>
 </html>

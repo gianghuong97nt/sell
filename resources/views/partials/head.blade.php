@@ -1,3 +1,4 @@
+    <title>Quản lý bán hàng</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -40,6 +41,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <!-- chart -->
     <script src="{{ asset('admin_assets/js/common.js') }}"></script>
     <script src="{{ asset('admin_assets/js/link.js') }}"></script>
+    <script src="{{ asset('admin_assets/css/common.css') }}"></script>
 
     <!-- //chart -->
     <!--//Metis Menu -->

@@ -30,10 +30,10 @@ Auth::routes();
 //], function() {
 
     Route::get('/','Admin\AdminController@index')->name('home');
-//  Thong tin ca nha
+//  Thong tin ca nhan
     Route::get('/info','Admin\AdminController@info')->name('info');
 //  Ruoute thay doi mat khau
-    Route::get('/changepassword','Admin\AdminController@info')->name('info');
+    Route::get('/changepassword','Admin\AdminController@changePassword')->name('info');
 
 //  Danh sach san pham
     Route::get('/product','Admin\ProductController@product')->name('product');
@@ -41,7 +41,12 @@ Auth::routes();
     Route::get('/order','Admin\OrderController@oder')->name('order');
 //  Danh sacsh nguoi dung
     Route::get('/user','Admin\UserController@user')->name('user');
-   
+
     // ...
+
+//  Route Anh
+    Route::post('/upload', 'Admin\AdminController@uploadImage');
+
+    Route::post('/deleteImage', 'Admin\AdminController@deleteImage')->name('deleteImage');
 
 //});

@@ -77,13 +77,7 @@ function initEvents() {
             alert('nhập email' + e.message);
         }
     });
-
-    $.ajaxSetup({
-        headers: {
-            'X-CSSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-
+    
 }
 
 

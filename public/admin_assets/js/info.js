@@ -275,7 +275,7 @@ function upload(img) {
 
         success: function (data) {
             if (data.fail) {
-                $('#preview_image').attr('src', 'uploads/cuc.jpg');
+                $('#preview_image').attr('src', 'uploads/default.jpg');
                 alert(data.errors['file']);
             }
             else {
@@ -285,7 +285,7 @@ function upload(img) {
         },
         error: function (xhr, status, error) {
             alert(xhr.responseText);
-            $('#preview_image').attr('src', 'uploads/cuc.jpg');
+            $('#preview_image').attr('src', 'uploads/default.jpg');
         }
     });
 }
@@ -300,7 +300,7 @@ function removeFile() {
         // dataType : 'json',
         data : data,
         success: function (data) {
-            $('#preview_image').attr('src', 'uploads/cuc.jpg');
+            $('#preview_image').attr('src', 'uploads/default.jpg');
             $('#file_name').val('');
             $('#loading').css('display', 'none');
         },

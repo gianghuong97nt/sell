@@ -1,0 +1,8 @@
+.error {
+    color: red;
+    margin-left: -40px;
+}
+
+.display_view{
+    display: none;
+}
