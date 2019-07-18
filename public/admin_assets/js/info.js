@@ -1,0 +1,139 @@
+
+'use strict';
+$(document).ready(function () {
+    init();
+    initEvents();
+
+});
+function init() {
+    $(document).ready(function(){
+        $('#email').focus();
+
+    });
+}
+var resutl = "";
+var _fail = "fail";
+var _true = "ok";
+
+function initEvents() {
+    $(document).on('click','#save_info',function (e) {
+        try {
+
+        } catch (e) {
+            alert('personalInfo' + e.message);
+        }
+    });
+
+    $(document).on('change','#email',function (e) {
+        try {
+            e.preventDefault();
+            if(isEmail($('#email').val())) {
+                $("#invalid_email").addClass('display_view');
+            }
+            else if($('#email').val() == ""){
+                $("#invalid_email").removeClass('display_view');
+                $("#invalid_email").html("Không được để trống");
+            }
+            else{
+                $("#invalid_email").removeClass('display_view');
+                $("#invalid_email").html("Nhập sai định dạng email");
+            }
+        } catch (e) {
+            alert('nhập email' + e.message);
+        }
+    });
+
+    $(document).on('click','#email',function (e) {
+        try {
+            e.preventDefault();
+            $("input").keypress(function(){
+                $("#invalid_email").addClass('display_view');
+            });
+
+        } catch (e) {
+            alert('nhập email' + e.message);
+        }
+    });
+
+
+
+}
+
+function validate() {
+    if(!isEmail($('#email').val())  ){
+        if(!isEmail($('#email').val())){
+            if($('#email').val() == ""){
+                $("#invalid_email").removeClass('display_view');
+                $("#invalid_email").html("Không được bỏ trống");
+            }else{
+                $("#invalid_email").removeClass('display_view');
+                $("#invalid_email").html("Nhập sai định dạng email");
+            }
+            $('#email').focus();
+            resutl = _fail;
+        }
+    }
+}
+
+function isEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+}
+
+function changeProfile() {
+    $('#file').click();
+}
+$('#file').change(function () {
+    if ($(this).val() != '') {
+        upload(this);
+
+    }
+});
+function upload(img) {
+    var form_data = new FormData();
+    form_data.append('file', img.files[0]);
+    $.ajax({
+        url: "/upload",
+        data: form_data,
+        type: 'POST',
+        contentType: false,
+        processData: false,
+
+        success: function (data) {
+            if (data.fail) {
+                $('#preview_image').attr('src', 'uploads/default.jpg');
+                alert(data.errors['file']);
+            }
+            else {
+                $('#file_name').val(data);
+                $('#preview_image').attr('src', 'uploads/' + data);
+            }
+        },
+        error: function (xhr, status, error) {
+            alert(xhr.responseText);
+            $('#preview_image').attr('src', 'uploads/default.jpg');
+        }
+    });
+}
+function removeFile() {
+    if ($('#file_name').val() != '')
+        $('#loading').css('display', 'block');
+    var data = {};
+    data.filename = $('#file_name').val();
+    $.ajax({
+        type : 'POST',
+        url : '/deleteImage',
+        // dataType : 'json',
+        data : data,
+        success: function (data) {
+            $('#preview_image').attr('src', 'uploads/default.jpg');
+            $('#file_name').val('');
+            $('#loading').css('display', 'none');
+        },
+        error: function (xhr, status, error) {
+            alert(xhr.responseText);
+        }
+    });
+}
+
+
