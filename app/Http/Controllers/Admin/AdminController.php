@@ -16,11 +16,11 @@ class AdminController extends Controller
     }
     
     public function info(){
-        return view('admins.info');
+        return view('admins.profile.info');
     }
 
     public function changePassword(){
-        return view('admins.change_password');
+        return view('admins.profile.change_password');
     }
 
     public function uploadImage(Request $request)

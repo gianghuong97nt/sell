@@ -33,14 +33,28 @@ Auth::routes();
 //  Thong tin ca nhan
     Route::get('/info','Admin\AdminController@info')->name('info');
 //  Ruoute thay doi mat khau
-    Route::get('/changepassword','Admin\AdminController@changePassword')->name('info');
+    Route::get('/changepassword','Admin\AdminController@changePassword')->name('changePassword');
+    Route::post('/changepassword','Admin\AdminController@savePassword');
 
 //  Danh sach san pham
-    Route::get('/listProduct','Admin\ProductController@product')->name('product');
+    Route::get('/product','Admin\ProductController@index')->name('product');
+//  Them moi san pham
+    Route::get('/product/add','Admin\ProductController@add');
+    Route::post('/product/add','Admin\ProductController@save');
+//  Sua san pham
+    Route::get('/product/edit','Admin\ProductController@edit')->name('editProduct');
+    Route::post('/product/edit','Admin\ProductController@edit');
+//  Xoa san pham
+    Route::get('/product/delete','Admin\ProductController@delete')->name('deleteProduct');
+    Route::post('/product/delete','Admin\ProductController@destroy');
 //  Danh sach don hang
     Route::get('/order','Admin\OrderController@oder')->name('order');
+//  Xoa san pham
+    Route::get('/order/delete','Admin\OrderController@delete')->name('deleteOrder');
+    Route::post('/order/delete','Admin\OrderController@destroy')->name('destroyOrder');
+
 //  Danh sacsh nguoi dung
-    Route::get('/user','Admin\UserController@user')->name('user');
+    Route::get('/user/add','Admin\UserController@add')->name('addUser');
 
     // ...
 

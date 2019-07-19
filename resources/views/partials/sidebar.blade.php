@@ -21,7 +21,7 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a id="list_product"><i class="fa fa-angle-right"></i> Danh sách sản phẩm</a></li>
+                            <li><a href="{{route('product')}}"><i class="fa fa-angle-right"></i> Danh sách sản phẩm</a></li>
                         </ul>
                     </li>
 
@@ -32,7 +32,7 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a id="list_order"><i class="fa fa-angle-right"></i> Danh sách đơn hàng</a></li>
+                            <li><a href="{{route('order')}}"><i class="fa fa-angle-right"></i> Danh sách đơn hàng</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -42,7 +42,7 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a id="list_user"><i class="fa fa-angle-right"></i> Danh sách người dùng</a></li>
+                            <li><a href="{{route('addUser')}}"><i class="fa fa-angle-right"></i> Danh sách người dùng</a></li>
                         </ul>
                     </li>
 
@@ -54,8 +54,8 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a id="info"><i class="fa fa-angle-right"></i>Thông tin cá nhân </a></li>
-                            <li><a id="password"><i class="fa fa-angle-right"></i>Đổi mật khẩu </a></li>
+                            <li><a href="{{route('info')}}"><i class="fa fa-angle-right"></i>Thông tin cá nhân </a></li>
+                            <li><a href="{{route('changePassword')}}"><i class="fa fa-angle-right"></i>Đổi mật khẩu </a></li>
                         </ul>
                     </li>
 

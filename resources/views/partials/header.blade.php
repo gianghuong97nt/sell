@@ -180,7 +180,7 @@
                             {{--<span class="prfil-img"><img src="{{asset('asset/images/1.jpg')}} " style="width: 20px; height: 20px" alt=""> </span>--}}
                             <div class="user-name">
                                 <p>Administrator</p>
-                                <span>{{ Auth::user()->name }}</span>
+                                {{--<span>{{ Auth::user()->name }}</span>--}}
                                 {{--<span>{{session('users')}}</span>--}}
                             </div>
                             <i class="fa fa-angle-down lnr"></i>
@@ -189,9 +189,9 @@
                         </div>
                     </a>
                     <ul class="dropdown-menu drp-mnu">
-                        <li> <a id="btn_info"><i class="fa fa-suitcase"></i> Thông tin cá nhân</a> </li>
-                        <li> <a id="btn_password"><i class="fa fa-unlock-alt"></i> Đổi mật khẩu</a></li>
-                        <li> <a id="logout"><i class="fa fa-sign-out" aria-hidden="true" ></i> Logout</a> </li>
+                        <li> <a href="{{route('info')}}"><i class="fa fa-suitcase"></i> Thông tin cá nhân</a> </li>
+                        <li> <a href="{{route('changePassword')}}"><i class="fa fa-unlock-alt"></i> Đổi mật khẩu</a></li>
+                        <li> <a href="{{route('info')}}"><i class="fa fa-sign-out" aria-hidden="true" ></i> Logout</a> </li>
                     </ul>
                 </li>
             </ul>

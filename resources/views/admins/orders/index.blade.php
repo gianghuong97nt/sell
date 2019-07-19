@@ -1,11 +1,11 @@
 @extends('layouts.glance')
 @section('title')
-    <title>Sản phẩm</title>
+    <title>Danh sách đơn hàng</title>
 @endsection
 @section('link')
     {{--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">--}}
     <link href="{{asset('admin_assets/css/table_product.css')}}" rel='stylesheet' type='text/css' />
-    <link href="{{asset('admin_assets/css/pro.css')}}" rel='stylesheet' type='text/css'/>
+    <link href="{{asset('admin_assets/css/product.css')}}" rel='stylesheet' type='text/css'/>
 @endsection
 @section('tag')
     <script src="{{ asset('admin_assets/js/product.js') }}"></script>
@@ -14,7 +14,7 @@
     <div class="forms tables">
         <div class="row">
             <div class="d-inline">
-                <h2 class="title1">Danh sách sản phẩm</h2>
+                <h2 class="title1">Danh sách đơn hàng</h2>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 btn-btn d-inline">
                 <button type="button" class="btn btn-success btn-2" id="btn-search">Search</button>

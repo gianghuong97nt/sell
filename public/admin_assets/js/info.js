@@ -18,7 +18,7 @@ var _true = "ok";
 function initEvents() {
     $(document).on('click','#save_info',function (e) {
         try {
-           
+
         } catch (e) {
             alert('personalInfo' + e.message);
         }
@@ -55,17 +55,7 @@ function initEvents() {
         }
     });
 
-    $(document).on('click','.btn-back-info',function (e) {
-        try {
-            window.location.href = '/';
 
-        } catch (e) {
-            alert('nhập email' + e.message);
-        }
-    });
-   
-
-    
 
 }
 
@@ -83,69 +73,6 @@ function validate() {
             resutl = _fail;
         }
     }
-}
-
-function personalInfo() {
-    try {
-        var data = {};
-        var avatar     =  $('#file_name').val();
-
-        if(avatar == ''){
-            avatar = 'cuc.jpg';
-        }
-
-
-
-        data.id = $('#userID').val();
-        data.username = $('#userName').val();
-        data.email = $('#email').val();
-        data.phone = $('#phone').val();
-        data.birthday = $('#birthday').val();
-        data.password = $('#passwordInfo').val();
-        data.address = $('#address').val();
-        data.gender =  $('#gender').val();
-        data.avatar = avatar;
-
-
-        $.ajax({
-            type: 'POST',
-            url: '/updatePersonalInfo',
-            dataType: 'json',  //html
-            loading: true,
-            data: data,
-            ///
-            success: function (res) {
-                switch (res['status']) {
-                    // Success
-                    case '200':
-                        $.dialogComplete({
-                            contents: JSMESSAGE.save_complete,
-                            callback: function () {
-                                location.reload();
-                            }
-                        });
-                        break;
-                    // Data Validate
-                    case '201':
-                        $.dialogComplete({
-                            contents: JSMESSAGE.update_error,
-                        });
-                        break;
-
-                    case '202':
-                        $.dialogComplete({
-                            contents: JSMESSAGE.update_error,
-                        });
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-    } catch (e) {
-        alert('login' + e.message);
-    }
-
 }
 
 function isEmail(email) {
