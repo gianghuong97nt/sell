@@ -6,7 +6,7 @@
     <link href="{{asset('admin_assets/css/edit_product.css')}}" rel='stylesheet' type='text/css' />
 @endsection
 @section('tag')
-    <script src="{{ asset('admin_assets/css/update_product.js') }}"></script>
+    <script src="{{ asset('admin_assets/js/update_product.js')}}"></script>
 @endsection
 @section('content')
     <div class="forms tables">
@@ -27,7 +27,7 @@
                             <label class="form-control label-info">Mã sản phẩm</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="product_id_update" disabled value="{{$product[0]['product_id']}}"/>
+                            <input type="text" class="form-control" id="product_id_update" disabled value=""/>
                         </div>
                     </div>
                     <div class="row">
@@ -35,7 +35,7 @@
                             <label class="form-control label-info">Tên sản phẩm</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="product_name_update" value="{{$product[0]['product_name']}}" maxlength="20"/>
+                            <input type="text" class="form-control" id="product_name_update" value="" maxlength="20"/>
                             <span class="error display_view" id="invalid_product_name"></span>
                         </div>
                     </div>
@@ -45,12 +45,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <select class="category" id="category_update">
-                                <option value="{{$product[0]['category_id']}}">{{$product[0]['name']}}</option>
-                                @foreach($categories as $category)
-                                    @if($category['id'] != $product[0]['category_id'])
-                                        <option value="{{$category['id']}}">{{$category['name']}}</option>
-                                    @endif
-                                @endforeach
+                                <option value=></option>
                             </select>
                         </div>
                     </div>
@@ -62,7 +57,7 @@
                             <label class="form-control label-info">Nhà cung cấp</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="supplier_update" value="{{$product[0]['supplier']}}" maxlength="20"/>
+                            <input type="text" class="form-control" id="supplier_update" value="" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -70,7 +65,7 @@
                             <label class="form-control label-info">Hãng</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="brand_update" value="{{$product[0]['brand']}}" maxlength="20"/>
+                            <input type="text" class="form-control" id="brand_update" value="" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -78,7 +73,7 @@
                             <label class="form-control label-info">Màu sắc</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="color_update" value="{{$product[0]['color']}}" maxlength="20"/>
+                            <input type="text" class="form-control" id="color_update" value="" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -86,7 +81,7 @@
                             <label class="form-control label-info">Cỡ</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="size_update" value="{{$product[0]['size']}}" maxlength="20"/>
+                            <input type="text" class="form-control" id="size_update" value="" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -94,7 +89,7 @@
                             <label class="form-control label-info">Số lượng</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="number" class="form-control" id="quantity_update" value="{{$product[0]['quantity']}}"/>
+                            <input type="number" class="form-control" id="quantity_update" value=""/>
                         </div>
                     </div>
                     <div class="row">
@@ -102,7 +97,7 @@
                             <label class="form-control label-info">Giá nhập</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="number" min="0" max="900000000" step="100000" class="form-control" id="price_core_update" value="{{$product[0]['price_core']}}"/>
+                            <input type="number" min="0" max="900000000" step="100000" class="form-control" id="price_core_update" value=""/>
                         </div>
                     </div>
                     <div class="row">
@@ -110,7 +105,7 @@
                             <label class="form-control label-info">Giá bán</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="number" min="0" max="900000000" step="100000"                                                                                                                    class="form-control" id="price_sale_update" value="{{$product[0]['price_sale']}}"/>
+                            <input type="number" min="0" max="900000000" step="100000" class="form-control" id="price_sale_update" value=""/>
                         </div>
                     </div>
                     <div class="row">
@@ -118,7 +113,7 @@
                             <label class="form-control label-info">Ghi chú</label>
                         </div>
                         <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
-                            <textarea class="form-control" id="note_update" maxlength="50">{{$product[0]['note']}}</textarea>
+                            <textarea class="form-control" id="note_update" maxlength="50"></textarea>
                         </div>
                     </div>
                 </div>
