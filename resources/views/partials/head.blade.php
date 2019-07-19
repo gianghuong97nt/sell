@@ -40,7 +40,6 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <link href="{{asset('asset/css/custom.css')}}" rel="stylesheet">
     <!-- chart -->
     <script src="{{ asset('admin_assets/js/common.js') }}"></script>
-    <script src="{{ asset('admin_assets/js/link.js') }}"></script>
     <script src="{{ asset('admin_assets/css/common.css') }}"></script>
 
     <!-- //chart -->

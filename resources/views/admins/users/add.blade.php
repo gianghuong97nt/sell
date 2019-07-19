@@ -24,7 +24,7 @@
                 <div class="form-body">
                     <div class="row">
                         <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                            <label class="form-control label-info">Tên</label>
+                            <label class="form-control label-info error">Tên</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="userName" value="" maxlength="20"/>
@@ -33,7 +33,7 @@
 
                     <div class="row">
                         <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                            <label class="form-control label-info">Password</label>
+                            <label class="form-control label-info error">Password</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="password" value="" maxlength="20"/>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                            <label class="form-control label-info">Nhập lại Password</label>
+                            <label class="form-control label-info error">Nhập lại Password</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="repassword" value="" maxlength="20"/>

@@ -7,7 +7,6 @@
 @endsection
 @section('tag')
     <script src="{{ asset('admin_assets/js/password.js') }}"></script>
-    <script src="{{ asset('admin_assets/js/link.js') }}"></script>
 @endsection
 @section('content')
     <div class="forms tables">
@@ -28,7 +27,7 @@
                             <label class="form-control label-info">Mật khẩu hiện tại</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="password_current"  maxlength="20"/>
+                            <input type="text" class="form-control error" id="password_current"  maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -42,7 +41,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                            <label class="form-control label-info">Nhập lại mật khẩu</label>
+                            <label class="form-control label-info error">Nhập lại mật khẩu</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <input type="tel" class="form-control" id="rep" length="20"/>

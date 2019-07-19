@@ -3,10 +3,10 @@
     <title>Sửa sản phẩm</title>
 @endsection
 @section('link')
-    <link href="{{asset('admins_assets/css/edit_product.css')}}" rel='stylesheet' type='text/css' />
+    <link href="{{asset('admin_assets/css/edit_product.css')}}" rel='stylesheet' type='text/css' />
 @endsection
 @section('tag')
-    <script src="{{ asset('admins_assets/css/update_product.js') }}"></script>
+    <script src="{{ asset('admin_assets/css/update_product.js') }}"></script>
 @endsection
 @section('content')
     <div class="forms tables">

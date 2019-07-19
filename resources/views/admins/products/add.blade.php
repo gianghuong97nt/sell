@@ -3,11 +3,11 @@
     <title>Thêm mới sản phẩm</title>
 @endsection
 @section('link')
-    <link href="{{asset('admins_assets/css/add_product.css')}}" rel='stylesheet' type='text/css' />
+    <link href="{{asset('admin_assets/css/add_product.css')}}" rel='stylesheet' type='text/css' />
 @endsection
 
 @section('tag')
-    <script src="{{ asset('admins_assets/js/addproduct.js}}"></script>
+    <script src="{{ asset('admin_assets/js/addproduct.js')}}"></script>
 @endsection
 @section('content')
     <div class="forms tables">
